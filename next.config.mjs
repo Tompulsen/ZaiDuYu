@@ -14,6 +14,12 @@ const nextConfig = {
       use: ["@svgr/webpack"],
     });
 
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        "process.env.WS_NO_UTF_8_VALIDATE": JSON.stringify("true"),
+      }),
+    );
+
     if (disableChunk) {
       config.plugins.push(
         new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
