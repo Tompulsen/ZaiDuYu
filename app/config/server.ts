@@ -156,7 +156,7 @@ export const getServerSideConfig = () => {
   const isAzure = !!process.env.AZURE_URL;
   const isGoogle = !!process.env.GOOGLE_API_KEY;
   const isAnthropic = !!process.env.ANTHROPIC_API_KEY;
-  const isTencent = !!process.env.TENCENT_API_KEY;
+  const isTencent = !!process.env.TENCENT_SECRET_KEY;
 
   const isBaidu = !!process.env.BAIDU_API_KEY;
   const isBytedance = !!process.env.BYTEDANCE_API_KEY;

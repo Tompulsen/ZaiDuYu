@@ -7,7 +7,7 @@ import { handle as anthropicHandler } from "../../anthropic";
 import { handle as baiduHandler } from "../../baidu";
 import { handle as bytedanceHandler } from "../../bytedance";
 import { handle as alibabaHandler } from "../../alibaba";
-import { handle as tencentHandler } from "../../tencent/route";
+import { handle as tencentHandler } from "../../tencent/handler";
 import { handle as moonshotHandler } from "../../moonshot";
 import { handle as stabilityHandler } from "../../stability";
 import { handle as iflytekHandler } from "../../iflytek";

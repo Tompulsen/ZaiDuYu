@@ -16,18 +16,13 @@ export async function fetchHttp1(
   const transport = isHttps ? https : http;
 
   return new Promise((resolve, reject) => {
-    const reqOptions: https.RequestOptions = {
+    const reqOptions: any = {
       hostname: parsedUrl.hostname,
       port: parsedUrl.port || (isHttps ? 443 : 80),
       path: parsedUrl.pathname + parsedUrl.search,
       method: options.method || "GET",
       headers: options.headers as Record<string, string>,
       // HTTP/3.0 (QUIC) with fallback to HTTP/1.1
-      // h3-29 = HTTP/3 draft-29
-      // h3-Q050 = HTTP/3 Q050
-      // h3 = HTTP/3
-      // h3-28, h3-27 = older HTTP/3 drafts
-      // http/1.1 = fallback
       ALPNProtocols: ["h3", "h3-29", "h3-Q050", "h3-28", "h3-27", "http/1.1"],
       // Keep-alive connection
       keepAlive: true,

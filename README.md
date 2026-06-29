@@ -447,7 +447,7 @@ bash <(curl -s https://raw.githubusercontent.com/Yidadaa/ChatGPT-Next-Web/main/s
 
 ## Documentation
 
-> Please go to the [docs][./docs] directory for more documentation instructions.
+> Please go to the [docs](./docs) directory for more documentation instructions.
 
 - [Deploy with cloudflare (Deprecated)](./docs/cloudflare-pages-en.md)
 - [Frequent Ask Questions](./docs/faq-en.md)
